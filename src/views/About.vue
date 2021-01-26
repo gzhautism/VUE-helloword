@@ -1,5 +1,27 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+    <div id="app">
+		<h1>计数器</h1>
+		<button @click="al">-</button>
+		<span>{{num}}</span>
+		<button @click="li">+</button>
+	</div>
+  </div>	
 </template>
+<script>
+export default {
+	data(){
+		return{
+			num:0
+		}
+	},
+	methods:{
+		al(){
+			this.num--;
+		},
+		li(){
+			this.num++;
+		}
+	}
+}
+</script>
