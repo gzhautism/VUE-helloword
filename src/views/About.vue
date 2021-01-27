@@ -14,10 +14,18 @@
 			<span>{{num2}}</span>
 			<button @click="num2++">+</button>
 		</div>
+		<div>
+			<h1>使用全局组件</h1>
+			<hiWorld msg='20210126' :num="20">
+				<h2 slot="title">姓名</h2>
+				<h3 slot="footer">关羽</h3>
+			</hiWorld>
+		</div>
 	</div>
 </template>
 <script>
 	export default {
+		
 		data() {
 			return {
 				num: 0,
